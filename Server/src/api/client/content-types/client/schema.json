@@ -1,0 +1,50 @@
+{
+  "kind": "collectionType",
+  "collectionName": "clients",
+  "info": {
+    "singularName": "client",
+    "pluralName": "clients",
+    "displayName": "client",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "surname": {
+      "type": "string"
+    },
+    "Email": {
+      "type": "email"
+    },
+    "date_of_birth": {
+      "type": "date"
+    },
+    "Telephone": {
+      "type": "biginteger"
+    },
+    "country": {
+      "type": "string"
+    },
+    "town": {
+      "type": "string"
+    },
+    "password": {
+      "type": "password"
+    },
+    "reservations": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::reservation.reservation"
+    },
+    "user": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user",
+      "mappedBy": "client"
+    }
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "kind": "collectionType",
+  "collectionName": "reservations",
+  "info": {
+    "singularName": "reservation",
+    "pluralName": "reservations",
+    "displayName": "reservation",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "debut_date": {
+      "type": "datetime"
+    },
+    "finish_date": {
+      "type": "datetime"
+    },
+    "status_of_reservstion": {
+      "type": "enumeration",
+      "enum": [
+        "waiting",
+        "validated",
+        "canceled "
+      ]
+    },
+    "percentage_payed": {
+      "type": "boolean"
+    },
+    "percentage_amount": {
+      "type": "decimal"
+    },
+    "payement": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::payement.payement",
+      "inversedBy": "reservation"
+    }
+  }
+}

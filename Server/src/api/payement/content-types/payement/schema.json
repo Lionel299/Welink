@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "payements",
+  "info": {
+    "singularName": "payement",
+    "pluralName": "payements",
+    "displayName": "payement"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "amount": {
+      "type": "decimal"
+    },
+    "date": {
+      "type": "datetime"
+    },
+    "status_of_payement": {
+      "type": "enumeration",
+      "enum": [
+        "waiting",
+        "payed"
+      ]
+    },
+    "reservation": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::reservation.reservation",
+      "mappedBy": "payement"
+    }
+  }
+}

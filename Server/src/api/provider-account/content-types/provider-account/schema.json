@@ -1,0 +1,17 @@
+{
+  "kind": "collectionType",
+  "collectionName": "provider_accounts",
+  "info": {
+    "singularName": "provider-account",
+    "pluralName": "provider-accounts",
+    "displayName": "provider_account"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "hello": {
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "kind": "collectionType",
+  "collectionName": "user_in_apps",
+  "info": {
+    "singularName": "user-in-app",
+    "pluralName": "user-in-apps",
+    "displayName": "User_in_app",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {}
+}
